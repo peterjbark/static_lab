@@ -59,3 +59,24 @@ const chef1 = new Chef ("Pierre", "29", "brown", "Sous-chef", "Roast-beef sandwi
 const chef2 = new Chef ("Bob", "41", "blue", "Head-chef", "Cheseburger")
 chef1.theUsual();
 chef2.theUsual();
+
+class BankAccount {
+    constructor(ownerName, balance, acctNum){
+        this.ownerName = ownerName;
+        this.balance = balance;
+        this.acctNum = acctNum;
+    }
+    deposit(amount){
+        this.balance += amount;
+        console.log(this.balance)
+    }
+    withdraw(amount){
+        this.balance -= amount;
+        console.log(this.balance)
+    }
+}
+
+const newBank = new BankAccount("peter", "200000", "12345");
+console.log(newBank);
+newBank.deposit(123);
+newBank.withdraw(123);
